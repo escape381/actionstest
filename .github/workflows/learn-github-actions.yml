@@ -15,4 +15,4 @@ jobs:
       - run: npm install -g bats
       - run: cat /etc/lsb-release
       - run: bats -v
-      - run: echo "this is env=${{ env.env_1 }}"
+      - run: echo "this is env=${{ env.env1 }}"
