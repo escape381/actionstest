@@ -1,6 +1,8 @@
 name: learn-github-actions-3
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
+env:
+  env1: takanori
 jobs:
   check-bats-version:
     runs-on: ubuntu-20.04
@@ -13,3 +15,4 @@ jobs:
       - run: npm install -g bats
       - run: cat /etc/lsb-release
       - run: bats -v
+      - run: echo "this is env=${{ env.env_1 }}"
